@@ -1,5 +1,5 @@
 
-on:
+on:jobs
   workflow_dispatch:
     inputs:
       USERNAME:
