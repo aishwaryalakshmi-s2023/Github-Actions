@@ -1,4 +1,4 @@
-name: Workspace Demo - Task 3
+name: Task 4 - Git Checkout Demo
 
 on:
   push:
@@ -10,14 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout GitHub repository
         uses: actions/checkout@v4
 
-      - name: Create file in workspace
-        run: echo "This file is created in GitHub Actions workspace" > sample.txt
-
-      - name: Show workspace files
-        run: ls -l
-
-      - name: Display file contents
-        run: cat sample.txt
+      - name: List files in workspace
+        run: ls -R
