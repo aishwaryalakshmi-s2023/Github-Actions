@@ -1,4 +1,4 @@
-name: Task 8 - Archive Artifacts Demo
+name: Archive Artifacts Demo
 
 on:
   workflow_dispatch:
