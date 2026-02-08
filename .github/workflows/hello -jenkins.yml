@@ -1,4 +1,4 @@
-name: Task 4 - Git Checkout Demo
+name: Task 5 - Auto Trigger Demo
 
 on:
   push:
@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout GitHub repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: List files in workspace
-        run: ls -R
+      - name: Show files
+        run: ls -l
+
+      - name: Print commit trigger message
+        run: echo "Build triggered automatically on commit"
