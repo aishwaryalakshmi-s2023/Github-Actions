@@ -1,4 +1,4 @@
-name: Parameterized Build Demo
+name: Task -6  Parameterized Build Demo
 on:
   workflow_dispatch:
     inputs:
