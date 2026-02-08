@@ -1,0 +1,23 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Compile Java
+        run: |
+          javac Hello.java
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: class-files
+          path: '*.class'
