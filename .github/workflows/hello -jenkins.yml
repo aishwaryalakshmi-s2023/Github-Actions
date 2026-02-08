@@ -1,4 +1,3 @@
-name:  Task 6 -Parameterized Build Demo
 
 on:
   workflow_dispatch:
@@ -7,15 +6,3 @@ on:
         description: 'Enter your name'
         required: true
         default: 'Aishwarya'
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Print USERNAME parameter
-        run: |
-          echo "Hello, ${{ github.event.inputs.USERNAME }}"
