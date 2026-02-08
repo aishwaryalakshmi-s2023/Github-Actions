@@ -1,4 +1,4 @@
-name: Task 7 -Java Build Demo
+name: Java Build Demo
 
 on:
   workflow_dispatch:
