@@ -1,4 +1,4 @@
-name: Hello-Jenkins (GitHub Actions)
+name: Workspace Demo - Task 3
 
 on:
   push:
@@ -13,5 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Print Hello Jenkins
-        run: echo "Hello Jenkins"
+      - name: Create file in workspace
+        run: echo "This file is created in GitHub Actions workspace" > sample.txt
+
+      - name: Show workspace files
+        run: ls -l
+
+      - name: Display file contents
+        run: cat sample.txt
